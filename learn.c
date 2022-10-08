@@ -224,6 +224,128 @@ printf("%lu\n", sizeof(myChar));
     Use else if to specify a new condition to test, if the first condition is false
     Use switch to specify many alternative blocks of code to be executed
 */
+if (20>10)
+
+{
+  printf("this is true\n");
+}
+
+int age1 = 18;
+int age2 = 20;
+if (age1 > age2)
+{
+  printf("age1 is grater then age2\n");
+} else {printf("age2 is grater then 21\n");}
+  
+int time= 12;
+if (time < 10)
+{
+  printf("Good Morning\n");
+}
+else if (time > 10)
+{
+  printf("Good Afternoon\n");
+}
+else("Good Evening\n");
+
+//ternary operator
+/*There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.
+ It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:
+ 
+ syntax:
+ variable= (condition) ? (expression true) : (expression false) ;
+*/
+/*
+ instead of writing 
+ */
+ int clock = 10;
+ if (clock < 10)
+ {
+  printf("This is Morning\n");
+ }
+ else {
+  printf("this is Afternoon\n");
+ }
+/* we can write*/
+
+int timing = 12;
+( timing < 12 ) ? printf("Good Morning\n") : printf("Good Afternoon\n");
+
+
+// c switch
+/*
+Instead of writing many if..else statements, you can use the switch statement.
+
+The switch statement selects one of many code blocks to be executed:
+
+syntax:
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+This is how it's work:
+
+    The switch expression is evaluated once
+    The value of the expression is compared with the values of each case
+    If there is a match, the associated block of code is executed
+    The break statement breaks out of the switch block and stops the execution
+    The default statement is optional, and specifies some code to run if there is no case match
+
+*/
+int day= 4;
+
+switch (day)
+{
+case 1:
+  printf("day Monday\n");
+  break; 
+  /*
+  When C reaches a break keyword, it breaks out of the switch block.
+
+  This will stop the execution of more code and case testing inside the block.
+
+  When a match is found, and the job is done, it's time for a break. There is no need for more testing.
+  
+  it saves a lot of execution time because it "ignores"
+  */
+case 2:
+  printf("day Twesday\n");
+  break;
+case 3:
+  printf("day Wednesday\n");
+  break;
+case 4:
+  printf("day Thursday\n");
+  break;
+case 5:
+  printf("day Friday\n");
+  break;
+case 6:
+  printf("day saturday\n");
+  break;
+case 7:
+  printf("day Sunday\n");
+  break;    
+
+default: //default keyword specifies some code to run if there is no case mach
+  printf("looking forward\n");
+  break;
+}
+
+//loops
+
+/*
+Loops can execute a block of code as long as a specified condition is reached.
+
+Loops are handy because they save time, reduce errors, and they make code more readable.
+*/
 
 
 
