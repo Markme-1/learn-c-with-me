@@ -345,7 +345,127 @@ default: //default keyword specifies some code to run if there is no case mach
 Loops can execute a block of code as long as a specified condition is reached.
 
 Loops are handy because they save time, reduce errors, and they make code more readable.
+there are two loops 
+while loop
+:- The while loop loops through a block of code as long as a specified condition is true:
+
+syntax:
+while (condition) {
+  // code block to be executed
+}
+for loop
+:-When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
+
+syntax:
+ for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+
+Statement 2 defines the condition for executing the code block.
+
+Statement 3 is executed (every time) after the code block has been executed.
 */
+
+//while loop
+
+int i = 5;
+while (i < 10)
+{
+  printf("%d\n", i);
+  i++ ;
+}
+
+/*
+do/while loop
+The do/while loop is a variant of the while loop. This loop will execute the code block once, 
+before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+syntax:
+do {
+  // code block to be executed
+}
+while (condition);
+
+The example below uses a do/while loop. The loop will always be executed at least once,
+ even if the condition is false, because the code block is executed before the condition is tested:
+*/
+
+int j = 0;
+do
+{
+  printf("%d\n", j);
+  j++;
+} while (j > 10);
+
+//for loop
+int k;
+
+for (k = 10; k < 20; k++)
+{
+  printf("%d\n", k);
+}
+
+/*
+c break and continue
+break:
+break statement used to "jump out" of a switch statement.
+The break statement can also be used to jump out of a loop.
+continue:
+The continue statement breaks one iteration (in the loop), 
+if a specified condition occurs, and continues with the next iteration in the loop.
+
+*/
+
+/*break*/
+int l;
+for ( l = 100; l < 110; l++)
+{
+  if (l == 105)
+  {
+    break;
+  }
+  printf("%d\n", l);
+}
+
+/*continue*/
+int m;
+for ( m = 0; m < 9; m++)
+{
+  if (m == 5)
+  {
+    continue;
+  }
+  printf("%d\n", m);
+}
+
+/*break and continue in while loop*/
+int n = 4;
+
+while (n < 11)
+{
+  if (n == 9)
+  {
+    break;
+  }
+  printf("%d\n", n);
+  n++;
+}
+
+int o = 15;
+
+while (o < 20)
+{
+  if (o == 17)
+  {
+    o++;
+    continue;
+  }
+  printf("%d\n", o);
+  o++;
+  
+}
+
 
 
 
